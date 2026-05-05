@@ -1,0 +1,35 @@
+name: SyncCanvas
+options:
+  bundleIdPrefix: com.ryankaya
+  deploymentTarget:
+    iOS: "16.2"
+  xcodeVersion: "15.0"
+targets:
+  SyncCanvas:
+    type: application
+    platform: iOS
+    sources:
+      - SyncCanvas
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ryankaya.synccanvas
+        SWIFT_VERSION: 5.9
+        TARGETED_DEVICE_FAMILY: "1,2"
+        DEVELOPMENT_TEAM: ""
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    info:
+      path: SyncCanvas/Info.plist
+      properties:
+        NSUbiquitousContainers:
+          iCloud.com.ryankaya.synccanvas:
+            NSUbiquitousContainerIsDocumentScopePublic: true
+            NSUbiquitousContainerName: SyncCanvas
+            NSUbiquitousContainerSupportedFolderLevels: Any
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+    entitlements:
+      path: SyncCanvas/SyncCanvas.entitlements
